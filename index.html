@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Via Cep</title>
+</head>
+<body>
+    <form id="enderecoForm" onsubmit="event.preventDefault(); enviarDados()">
+        <label for="client_address_cep">CEP:</label>
+        <input type="text" id="client_address_cep" onchange="buscarCep(this.value)" />
+
+        <label for="client_address">Rua:</label>
+        <input type="text" id="client_address" />
+
+        <label for="client_address_neighborhood">Bairro:</label>
+        <input type="text" id="client_address_neighborhood" />
+
+        <label for="client_address_state">Estado:</label>
+        <select id="client_address_state" onchange="filtrarCidades(this.value)">
+            <option value="">Selecione um estado</option>
+        </select>
+
+        <label for="client_address_city">Cidade:</label>
+        <select id="client_address_city">
+            <option value="">Selecione uma cidade</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="./criar-estabelecimentos.js"></script>
+</body>
+</html>
